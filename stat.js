@@ -7,7 +7,7 @@
   * Methods return values as doubles.
   * Arrays interpreted as vectors
   */
-var stat = (function() {
+define([], function() {
 	/** Checks if a given value is an array (ie. vector).
 	  * @param a the value we're checking
 	  */
@@ -84,7 +84,7 @@ var stat = (function() {
 		  * @param b the vector we're subtracting
 		  * @return the difference
 		  */
-		vSubtract :function(a, b) {
+		vSubtract:function(a, b) {
 			checkArray(a);
 			checkArray(b);
 			var result = [];
@@ -194,4 +194,4 @@ var stat = (function() {
 			return v;
 		},
 	}
-})();
+});
