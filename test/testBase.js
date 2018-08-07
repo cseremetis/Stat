@@ -17,6 +17,26 @@ QUnit.test( "Test Dot Product", function( assert ) {
   assert.equal(70, stat.dotp(v1, v2));
 });
 
+QUnit.test("Test Vector Addition", function(assert) {
+  let v1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  let v2 = [11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+  let result = [12, 14, 16, 18, 20, 22, 24, 26, 28, 30];
+
+  for (let i = 0; i < result.length; i++) {
+    assert.equal(result[i], stat.vAdd(v1, v2)[i]);
+  }
+});
+
+QUnit.test("Test Vector Subtraction", function(assert) {
+  let v1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  let v2 = [11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+  let result = [10, 10, 10, 10, 10, 10, 10, 10, 10, 10];
+
+  for (let i = 0; i < result.length; i++) {
+    assert.equal(result[i], stat.vSubtract(v2, v1)[i]);
+  }
+});
+
 QUnit.test("Test Transpose", function(assert) {
   let a = [
     [1, 1, 1],
