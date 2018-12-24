@@ -1,2 +1,2 @@
 # Stat
-A statistics library for javascript applications
+A library of Linear Algebra functions for javascript applications
